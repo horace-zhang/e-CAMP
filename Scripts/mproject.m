@@ -10,8 +10,7 @@ AdamOptmFlag = 1; % Adam optimizer is used now
 
 if AdamOptmFlag == 1
     
-    % [xoutput_itm,~,~,~] = fmin_adam_inner(@(x)mprojectObjGrad(x, x0, Nx, Ny, ETNo), x);
-    [xoutput_itm,~,~,~] = fmin_adam_inner(@(x)mprojectObjGrad(abs(x), abs(x0), Nx, Ny, ETNo), x);
+    [xoutput_itm,~,~,~] = fmin_adam_inner(@(x)mprojectObjGrad(x, x0, Nx, Ny, ETNo), x);
    
     xoutput = UpdateAllImages(xoutput_itm, Nx, Ny, ETNo);
     
